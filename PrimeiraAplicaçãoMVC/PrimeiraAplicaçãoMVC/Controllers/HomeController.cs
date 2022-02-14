@@ -18,9 +18,9 @@ namespace PrimeiraAplicaçãoMVC.Controllers
             return "Este é o contéudo da página inicial do site";
         }
 
-        public string BoasVindas()
+        public string BoasVindas(string nome, int cont)
         {
-            return "Bem-vindo á primeira aula sobre MVC";
+            return "Olá " + nome + ", contador está valenda " + cont;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
