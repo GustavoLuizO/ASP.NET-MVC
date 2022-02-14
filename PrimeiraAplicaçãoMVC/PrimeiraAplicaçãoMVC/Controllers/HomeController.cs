@@ -1,0 +1,32 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using PrimeiraAplicaçãoMVC.Models;
+using System.Diagnostics;
+
+namespace PrimeiraAplicaçãoMVC.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public string Index()
+        {
+            return "Este é o contéudo da página inicial do site";
+        }
+
+        public string BoasVindas()
+        {
+            return "Bem-vindo á primeira aula sobre MVC";
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
