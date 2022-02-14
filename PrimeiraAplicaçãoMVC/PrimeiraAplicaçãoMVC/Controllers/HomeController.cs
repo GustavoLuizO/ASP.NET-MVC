@@ -13,9 +13,9 @@ namespace PrimeiraAplicaçãoMVC.Controllers
             _logger = logger;
         }
 
-        public string Index()
+        public ActionResult Index()
         {
-            return "Este é o contéudo da página inicial do site";
+            return View();
         }
 
         public string BoasVindas(string nome, int cont)
