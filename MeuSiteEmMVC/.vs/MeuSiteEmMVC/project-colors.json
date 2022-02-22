@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0e3a00d1-b814-4372-b265-07c8a47e47b1": {
+      "ProjectGuid": "0e3a00d1-b814-4372-b265-07c8a47e47b1",
+      "DisplayName": "MeuSiteEmMVC",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
