@@ -39,5 +39,18 @@ namespace SegundaAplicacaoMVC.Controllers
         {
             return View(categorylist);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult Create(Category category)
+        {
+            categorylist.Add(category);
+            return RedirectToAction("Index");
+        }
     }
 }
