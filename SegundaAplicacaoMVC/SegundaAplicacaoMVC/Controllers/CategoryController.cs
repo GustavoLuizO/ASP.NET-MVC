@@ -68,5 +68,12 @@ namespace SegundaAplicacaoMVC.Controllers
             categorylist.Add(category);
             return RedirectToAction("Index");
         }
+
+        public IActionResult Details (long id)
+        {
+            return View(categorylist.Where(m=>m.CategoryID ==id).First());
+        }
+
+
     }
 }
