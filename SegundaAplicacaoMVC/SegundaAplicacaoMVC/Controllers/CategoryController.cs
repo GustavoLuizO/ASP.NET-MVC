@@ -71,7 +71,7 @@ namespace SegundaAplicacaoMVC.Controllers
 
         public IActionResult Details (long id)
         {
-            return View(categorylist.Where(m=>m.CategoryID ==id).First());
+            return View(categorylist.Where(m=>m.CategoryID == id).First());
         }
 
 
