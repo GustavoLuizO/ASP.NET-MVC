@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SegundaAplicacaoMVC.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SegundaAplicacaoMVC.Controllers
 {
@@ -49,6 +50,21 @@ namespace SegundaAplicacaoMVC.Controllers
 
         public IActionResult Create(Category category)
         {
+            categorylist.Add(category);
+            category.CategoryID = categorylist.Select(m => m.CategoryID).Max() + 1;
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(long id)
+        {
+            return View(categorylist.Where(m => m.CategoryID == id).First());
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult Edit(Category category)
+        {
+            categorylist.Remove(categorylist.Where(c => c.CategoryID == category.CategoryID).First());
             categorylist.Add(category);
             return RedirectToAction("Index");
         }
