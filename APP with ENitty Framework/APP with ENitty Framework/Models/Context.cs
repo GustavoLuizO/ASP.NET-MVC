@@ -10,7 +10,7 @@ namespace APP_with_ENitty_Framework.Models
 
         }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; } //Conjunto de dados do tipo Porudto se constituira em uma tabela do Bd*
         public DbSet<manufacturer> manafactures { get; set; }
     }
 }
