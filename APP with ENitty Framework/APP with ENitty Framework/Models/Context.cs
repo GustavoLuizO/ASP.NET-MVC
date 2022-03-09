@@ -5,7 +5,7 @@ namespace APP_with_ENitty_Framework.Models
     public class Context : DbContext
     {
         public Context(DbContextOptions<Context> options)
-            : base(options)
+            : base(options) //busca as configurações de conexão com o BD
         {
 
         }
