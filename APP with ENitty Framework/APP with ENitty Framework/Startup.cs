@@ -1,6 +1,8 @@
+using APP_with_ENitty_Framework.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +26,10 @@ namespace APP_with_ENitty_Framework
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            //configuração para acesso ao banco de dados
+            services.AddDbContext<Context>(options => options.UseSqlServer(Configuration["Data:Exemplo3BD:ConnectionString"]));
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
