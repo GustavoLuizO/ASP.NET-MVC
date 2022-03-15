@@ -28,7 +28,7 @@ namespace APP_with_ENitty_Framework
             services.AddControllersWithViews();
 
             //configuração para acesso ao banco de dados
-            services.AddDbContext<Context>(options => options.UseSqlServer(Configuration["Data:Exemplo3BD:ConnectionString"]));
+            services.AddDbContext<Context>(options => options.UseSqlServer(Configuration["Data:APP_withENittyFramework:ConnectionString"]));
             services.AddMvc();
         }
 
