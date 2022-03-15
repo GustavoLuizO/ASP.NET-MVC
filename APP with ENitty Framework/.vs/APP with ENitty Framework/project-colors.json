@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d911a6b8-960c-4b5b-9729-3d1760a1408f": {
+      "ProjectGuid": "d911a6b8-960c-4b5b-9729-3d1760a1408f",
+      "DisplayName": "APP with ENitty Framework",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
