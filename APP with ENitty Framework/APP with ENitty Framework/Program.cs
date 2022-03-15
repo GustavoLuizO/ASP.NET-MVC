@@ -21,6 +21,8 @@ namespace APP_with_ENitty_Framework
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+            //Evita a exceção de banco de dados inexistente
+            .UseDefaultServiceProvider(options => options.ValidateScopes = false);
     }
 }
